@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Of Birth</title>
+    <style>
+        h2 {
+            text-align: center;
+        }
+
+        pre {
+            margin: auto;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 65%;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        let today = new Date();
+
+        // let year = today.getFullYear();
+
+        // let month = today.getMonth() + 1;
+
+        // let date = today.getDate();
+
+        let input = prompt("Enter D-O-B in YYYY-MM-DD Format : ");
+        let inputDate = new Date(input);
+
+        if (input == null || input == "") {
+            console.log("No D-O-B entered");
+            document.write("<h2>No D-O-B entered</h2>");
+        } else {
+            if (inputDate <= today) {
+                console.log("D-O-B is Accepted");
+                document.write("<h2>D-O-B is Accepted</h2>")
+            }
+            else {
+                console.log("D-O-B is INVALID (please check the format and correct today)");
+                document.write("<h2>D-O-B is INVALID (please check the format and correct today)</h2>")
+            }
+        }
+    </script>
+    <pre>
+        <h2>SOURCE CODE : </h2>
+
+        let today = new Date();
+
+        // let year = today.getFullYear();
+
+        // let month = today.getMonth() + 1;
+
+        // let date = today.getDate();
+
+        let input = prompt("Enter D-O-B in YYYY-MM-DD Format : ");
+        let inputDate = new Date(input);
+
+        if (input == null || input == "") {
+            console.log("No D-O-B entered");
+            document.write("No D-O-B entered");
+        }
+        else {
+        if (inputDate <= today) {
+            console.log("D-O-B is Accepted");
+            document.write("D-O-B is Accepted")
+        }
+        else {
+            console.log("D-O-B is INVALID (please check the format and correct today)");
+            document.write("D-O-B is INVALID (please check the format and correct today)")
+        }
+    }
+    </pre>
+</body>
+
+</html>
